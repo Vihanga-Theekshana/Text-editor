@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+   
+}
+
+
+
+.block{
+
+background-color:rgb(47, 42, 58);
+padding: 15px;
+display: flex;
+align-content: center;
+justify-content: center;
+column-gap: 15px;
+
+
+}
+button{
+
+background: none;
+outline: none;
+border: none;
+color: aliceblue;
+
+
+}
+
+button:hover{
+
+    color: rgb(183, 255, 0);
+    
+
+}
+button:active{
+
+    color: darkgreen;
+
+}
