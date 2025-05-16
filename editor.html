@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Text</title>
+<title>Text Editor</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="editor.css">
-
+<script src="editor.js"></script>
 </head>
-
 <body>
 <div class="block">
-    <button><i class="fa fa-bold" aria-hidden="true"></i></button>
-    <button><i class="fa fa-underline" aria-hidden="true"></i></button>
-    <button><i class="fa fa-italic" aria-hidden="true"></i></button>
-    <button><i class="fa fa-font" aria-hidden="true"></i></button>
-    <button><i class="fa fa-align-left" aria-hidden="true"></i></button>
-    <button><i class="fa fa-align-center" aria-hidden="true"></i></button>
-    <button><i class="fa fa-align-right" aria-hidden="true"></i></button>
-    <button><i class="fa fa-align-justify" aria-hidden="true"></i></button>
-    <button><i class="fa fa-undo" aria-hidden="true"></i></button>
-    <button><i class="fa fa-redo" aria-hidden="true"></i></i></button>
+    <button onclick="edit('bold')"><i class="fa fa-bold" aria-hidden="true"></i></button>
+    <button onclick="edit('underline')"><i class="fa fa-underline" aria-hidden="true"></i></button>
+    <button onclick="edit('italic')"><i class="fa fa-italic" aria-hidden="true"></i></button>
+     <div class="colorbutton">
+    <button onclick="triggercolor()">
+        <i class="fa fa-font" aria-hidden="true"></i>
+        <div id="underline" class="underline-box"></div>    
+    </button>
+    <input type="color" id="fontcolor" class="colorselector" onchange="changefontcolor()">
+     </div>    
+    <button onclick="edit('justifyLeft')"><i class="fa fa-align-left" aria-hidden="true"></i></button>
+    <button onclick="edit('justifyCenter')"><i class="fa fa-align-center" aria-hidden="true"></i></button>
+    <button onclick="edit('justifyRight')"><i class="fa fa-align-right" aria-hidden="true"></i></button>
+    <button onclick="edit('justifyFull')"><i class="fa fa-align-justify" aria-hidden="true"></i></button>
+    <button onclick="edit('undo')"><i class="fa fa-undo" aria-hidden="true"></i></button>
+    <button onclick="edit('redo')"><i class="fa fa-redo" aria-hidden="true"></i></i></button>
 </div>
-
-
+<div id="note" class="text" contenteditable="true">
+</div>
 </body>
-
-
 </html>
