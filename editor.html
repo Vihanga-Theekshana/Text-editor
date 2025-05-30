@@ -9,16 +9,18 @@
 <script src="editor.js"></script>
 </head>
 <body>
-<div class="block">
+<!-- Add buttons-->
+<div class="top-include-block">
     <button onclick="edit('bold')"><i class="fa fa-bold" aria-hidden="true"></i></button>
     <button onclick="edit('underline')"><i class="fa fa-underline" aria-hidden="true"></i></button>
     <button onclick="edit('italic')"><i class="fa fa-italic" aria-hidden="true"></i></button>
+    <!--ceate color button-->
      <div class="colorbutton">
     <button onclick="triggercolor()">
         <i class="fa fa-font" aria-hidden="true"></i>
         <div id="underline" class="underline-box"></div>    
     </button>
-    <input type="color" id="fontcolor" class="colorselector" onchange="changefontcolor()">
+    <input type="color" id="colorselect" onchange="changefontcolor()">
      </div>    
     <button onclick="edit('justifyLeft')"><i class="fa fa-align-left" aria-hidden="true"></i></button>
     <button onclick="edit('justifyCenter')"><i class="fa fa-align-center" aria-hidden="true"></i></button>
@@ -27,7 +29,8 @@
     <button onclick="edit('undo')"><i class="fa fa-undo" aria-hidden="true"></i></button>
     <button onclick="edit('redo')"><i class="fa fa-redo" aria-hidden="true"></i></i></button>
 </div>
-<div id="note" class="text" contenteditable="true">
+<!--Add typing area-->
+<div id="note" class="typing-area" contenteditable="true">
 </div>
 </body>
 </html>
